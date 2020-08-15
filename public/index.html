@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Courtney McNealy</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <nav id="prog-navbar" class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active prog-nav-item">
+            <a class="font-weight-bold prog-nav-link pl-3 pr-3" href="#prog-welcome-section">About</a>
+          </li>
+          <li class="nav-item active prog-nav-item">
+            <a class="font-weight-bold prog-nav-link pl-3 pr-3" href="#prog-projects">Projects</a>
+          </li>
+          <li class="nav-item active prog-nav-item">
+            <a class="font-weight-bold prog-nav-link pl-3 pr-3" href="#prog-connect">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="container-fluid full-height-custom top-padding-custom" id="prog-welcome-section">
+      <div class="d-flex flex-column" id="welcome-row">
+        <h1 class="header-item prog-header-item text-center font-weight-bold prog-name header-name">Courtney</h1>
+        <h1 class="header-item prog-header-item text-center font-weight-bold prog-name header-name">McNealy</h1>
+        <div class="header-item prog-header-item text-center font-weight-bold pt-5">Aspiring Web Developer</div>
+        <a class="header-item prog-header-item text-center" id="prog-header-link" target="_blank" href="https://codepen.io/courtneymcnealy/full/yLezjqO">&lt; See My Artist Page Instead &gt;</a>
+      </div>
+    </section>
+
+    <section class="container-fluid" id="prog-projects">
+      <header class="text-center font-weight-bold p-5" id="Projects_Header">Here's A Sample Of My Work</header>
+
+
+        <div id="root"></div>
+
+
+    </section>
+
+    <section class="container-fluid full-height-custom top-padding-custom" id="prog-connect">
+      <h1 class="text-center font-weight-bold Connect-Header">Connect</h1>
+      <h1 class="text-center font-weight-bold Connect-Header">With Me</h1>
+      <div id="row justify-content-center">
+        <div class="text-center prog-connect-link col-12"><a target="_blank" href="https://www.freecodecamp.org/courtneymcnealy">My freeCodeCamp profile</a></div>
+        <div class="text-center prog-connect-link col-12"><a target="_blank" href="https://codepen.io/courtneymcnealy">My Codepen.io Profile</a></div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  </body>
+
+  <footer class="prog-footer p-3 text-center">&copy; Courtney McNealy, 2020</footer>
+</html>

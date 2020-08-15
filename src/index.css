@@ -1,0 +1,243 @@
+:root { /* color palette variables */
+  --progblack: #1B1818;
+  --progpurple: #7C01FF;
+  --progyellow: #F2FF49;
+  --progorange: #E8871E;
+  --progcyan: #21897E;
+  --progpink: #c92780;
+  --proggray: #535250;
+  --progdarkgray: #2a2a2a;
+  --progwhite: #F7F2F8;
+
+  --artblack: #45354D;
+  --artgreendark: #58763F;
+  --artsage: #82957F;
+  --artpurple: #63467C;
+  --artteal: #9ED3C6;
+  --artpeachlight: #f9ebd7;
+  --artpeachdark: #eca787;
+  --artyellow: #ECEAA8;
+  --artgray: #848c8a;
+  --white: #ffffff;
+}
+
+body {
+  font-family: 'Arvo', serif !important;
+  text-align: center;
+}
+
+
+
+
+
+.modal-content {
+  background-color: var(--artpeachlight) !important;
+  color: var(--artblack); }
+.modal-img {
+  max-height: 70vh;
+  max-width: 80vw;
+  display: block;
+  margin: auto;
+  box-shadow: 0 0 5px var(--artgray); }
+.etsy-button {
+  background-color: #f56400;
+  cursor: pointer;
+  color: white;
+  border: none;
+  box-shadow: 1px 1px 3px var(--artgray);
+  border-radius: 3px;
+}
+
+#art-navbar {
+  background-color: var(--artsage);}
+.artist-nav-link {
+  color: white;
+  font-size: 3vh;}
+.artist-nav-link:hover {
+  color: white !important;
+  text-decoration: none;
+  text-shadow: 0 0 3px var(--artyellow);
+}
+#prog-navbar {
+  background-color: var(--progdarkgray);}
+.prog-nav-link {
+  color: white;
+  font-size: 3vh;}
+.prog-nav-link:hover {
+  color: var(--progorange) !important;
+  text-decoration: none;
+}
+
+.full-height-custom {
+  min-height: 100vh;
+  background-color: white;
+}
+
+#prog-welcome-section {
+  background: url(https://s3.amazonaws.com/courtney.valhallacode.org/images/programmer/background.png);
+  background-size: cover; }
+
+.prog-header-item {
+  color: var(--progyellow);
+  text-shadow: 0 0 3px var(--progblack); }
+.prog-name {
+  color: var(--progwhite); }
+#prog-header-link:hover {
+  color: var(--progorange);
+  text-decoration: none;
+}
+#art-welcome-section {
+  background: url(https://valhallacode-website.s3.amazonaws.com/art+images/background-lightened.png);
+  background-size: cover; }
+.artist-header-item {
+  color: var(--artpurple);
+  text-shadow: 0 0 10px var(--white);}
+#art-header-link a {
+  color: var(--artpurple); }
+#art-header-link a:hover {
+  color: var(--artgreendark) !important;
+  text-decoration: none !important;
+  text-shadow: 0 0 3px var(--artyellow);
+}
+
+
+
+
+#art-projects {
+  background-color: var(--artpeachlight);
+  padding-top: 60px;}
+#art-projects header {
+  font-size: 6vh;
+  color: var(--artgreendark);
+}
+.art-tile {
+}
+.art-tile img {
+  border-radius: 2px;
+  box-shadow: 0 3px 10px var(--artgray);
+}
+#prog-projects {
+  background-color: black;
+  padding-top: 60px;}
+#prog-projects header {
+  font-size: 6vh;
+  color: var(--progpink);
+}
+.prog-tile {
+  background-color: var(--proggray);
+  border-radius: 2px;
+  box-shadow: 0 0px 10px var(--progpurple); }
+.tile-title {
+  text-decoration: none;
+  color: var(--progwhite);
+}
+.prog-tile:hover {
+  box-shadow: 0 0 10px cyan; }
+.prog-tile:hover a {
+  text-decoration: none;}
+.prog-tile img {
+  border-radius: 4px;
+  width: 400px;
+}
+
+.tile-js {
+  width: 400px;
+  background-color: white;
+  border-radius: 4px;
+  color: black; }
+.submit-btn-custom {
+  background-color: green;
+}
+
+
+
+#prog-connect {
+  padding-top: 35vh;
+  background-color: var(--progblack);
+  background: url(https://s3.amazonaws.com/courtney.valhallacode.org/images/programmer/background.png);
+  background-size: cover; }
+#prog-connect h1 {
+  color: var(--progwhite);}
+.prog-connect-link a {
+  color: var(--progyellow); }
+.prog-connect-link a:hover {
+  color: var(--progorange) !important;
+  text-decoration: none !important;
+}
+#art-connect {
+  background-color: white; }
+.connect header {
+  color: var(--artpurple);}
+.connect-link {
+  color: var(--artpurple); }
+.connect-link:hover {
+  color: var(--artgreendark) !important;
+  text-decoration: none !important;
+  text-shadow: 0 0 3px var(--artyellow);
+}
+
+@media (max-width: 599.98px) {
+  /* most phones */
+  .header-item {
+    font-size: 5vw; }
+  .header-name {
+    font-size: 15vw;
+  }
+  .Connect-Header {
+    font-size: 12vw; }
+  .prog-connect-link, art-connect-link {
+    font-size: 5vw;
+  }
+  .top-padding-custom {
+    padding-top: 30vh;
+  }
+  .breakpoint-width {
+    max-width: 90vw;
+  }
+}
+@media (min-width: 600px) {
+  /* For portrait tablets and smaller */
+  .header-item {
+    font-size: 5vw; }
+  .header-name {
+    font-size: 15vw;
+  }
+  .Connect-Header {
+    font-size: 12vw; }
+  .prog-connect-link, art-connect-link {
+    font-size: 5vw;
+  }
+  .top-padding-custom {
+    padding-top: 30vh;
+  }
+  .breakpoint-width {
+    max-width: 400px;
+  }
+}
+@media (min-width: 900px) {
+  /* For landscape tablets and larger */
+  .header-item {
+    font-size: 4vh;}
+  .header-name {
+    display: inline-block;
+    font-size: 8vw;
+  }
+  .Connect-Header {
+    display: inline-block;
+    font-size: 8vw; }
+  .prog-connect-link, art-connect-link {
+    font-size: 3vw;
+  }
+  .top-padding-custom {
+    padding-top: 40vh;
+  }
+  .breakpoint-width {
+    max-width: 400px;
+  }
+}
+
+.prog-footer {
+  background-color: var(--progblack);
+  color: gray;
+}
+
