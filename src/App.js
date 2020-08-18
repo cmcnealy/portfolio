@@ -1,49 +1,15 @@
 import React from 'react';
 import './App.css';
+import JSCard from "./Components/JSCard";
+import HTMLCard from "./Components/HTMLCard";
 import { rot13 } from "./functions/rot13";
-import { convertToRoman } from "./functions/roman-numeral";
+import { convert } from "./functions/roman-numeral";
 import { palindrome } from "./functions/palindrome";
 import { translatePigLatin } from "./functions/pig-latin";
 
-class JSCard extends React.Component {
-  render(){
-    return (
-        <div className="prog-tile col-auto m-3 mb-5 p-0">
-          <div>
-            <div className="tile-js text-center p-3 breakpoint-width">
-              <h4 className="font-weight-bold">{this.props.title}</h4>
-              <form id={this.props.formID}>
-                <input className="form-control text-center" type="text" id="code" name="code" placeholder="Word or phrase"/>
-              </form>
-              <button className="btn btn-primary text-center m-2" type="button" onClick={this.props.function}>Submit</button>
-              <div className="p-3" id={this.props.resultID}>
-                Your result will appear here
-              </div>
-            </div>
-            <div className="tile-title text-center font-weight-bold p-1">
-              {this.props.cardtitle}
-            </div>
-            <div className="tile-title text-center p-1">
-              {this.props.languages}
-            </div>
-          </div>
-        </div>
-    )
-  }
-}
 
-class HTMLCard extends React.Component {
-  render() {
-    return(
-        <div className="prog-tile col-auto m-3 mb-5 p-0">
-          <a target="_blank" rel="noopener noreferrer" href={this.props.url}>
-            <img className="tile-img breakpoint-width" src={this.props.src} alt={this.props.alt}/>
-            <div className="tile-title text-center font-weight-bold p-1">{this.props.cardtitle}</div>
-            <div className="tile-title text-center p-1">{this.props.languages}</div></a>
-        </div>
-    );
-  }
-}
+
+
 
 class App extends React.Component {
   constructor(props){
@@ -51,6 +17,13 @@ class App extends React.Component {
     this.state = {
       reactcards: [
         {
+          url: "https://github.com/cmcnealy/portfolio",
+          src: "./images/programmer/programportfolio-thumb.png",
+          alt: "Thumbnail",
+          cardtitle: "This Portfolio's Source",
+          languages: "React"
+        },
+          {
           url: "https://codepen.io/courtneymcnealy/full/xxVwKNp",
           src: "./images/programmer/pomodoro-thumb.png",
           alt: "Thumbnail",
@@ -65,8 +38,8 @@ class App extends React.Component {
           languages: 'React'
         },
         {
-          url: 'https://codepen.io/courtneymcnealy/full/NWNKaad',
-          src: './images/programmer/drum-thumb.png',
+          url: 'https://codepen.io/courtneymcnealy/full/GRZZbPz',
+          src: './images/programmer/steeldrum-thumb.png',
           alt: "Thumbnail",
           cardtitle: 'Drum Machine',
           languages: 'React'
@@ -83,15 +56,17 @@ class App extends React.Component {
         {
           title: "Caesar Cipher (ROT13) Encoder and Decoder",
           formID: "rot13-form",
+          named: "code",
           function: rot13,
           resultID: "rot13-result",
           cardtitle: "Caesar Cipher Converter",
           languages: "JavaScript"
         },
         {
-          title: "Convert A Number To Roman Numerals (up to 3999)",
+          title: "Roman Numeral Converter (to and from, up to 9999)",
           formID: "roman-numeral-form",
-          function: convertToRoman,
+          named: "numeral",
+          function: convert,
           resultID: "roman-numeral-result",
           cardtitle: "Roman Numeral Converter",
           languages: "JavaScript"
@@ -99,14 +74,16 @@ class App extends React.Component {
         {
           title: "Palindrome Checker",
           formID: "palindrome-form",
+          named: "palindrome",
           function: palindrome,
           resultID: "palindrome-result",
           cardtitle: "Palindrome Checker",
           languages: "JavaScript"
         },
         {
-          title: "Convert Any Word To Pig Latin",
+          title: "Convert Any Phrase To Pig Latin",
           formID: "pig-latin-form",
+          named: "pig-word",
           function: translatePigLatin,
           resultID: "pig-latin-result",
           cardtitle: "Pig Latin Generator",
@@ -171,6 +148,7 @@ class App extends React.Component {
                   key={i}
                   title={card.title}
                   formID={card.formID}
+                  named = {card.named}
                   function={card.function}
                   resultID={card.resultID}
                   cardtitle={card.cardtitle}
