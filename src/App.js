@@ -23,7 +23,14 @@ class App extends React.Component {
           cardtitle: "This Portfolio's Source",
           languages: "React"
         },
-          {
+        {
+          url: "https://codepen.io/courtneymcnealy/full/gOrwvqW",
+          src: "./images/programmer/gradient-thumb.png",
+          alt: "Thumbnail",
+          cardtitle: 'CSS Radial Gradient Generator',
+          languages: 'React with Hooks'
+        },
+        {
           url: "https://codepen.io/courtneymcnealy/full/xxVwKNp",
           src: "./images/programmer/pomodoro-thumb.png",
           alt: "Thumbnail",

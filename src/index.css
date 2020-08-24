@@ -74,7 +74,7 @@ body {
 }
 
 #prog-welcome-section {
-  background: url(https://s3.amazonaws.com/courtney.valhallacode.org/images/programmer/background.png);
+  background-color: var(--progblack);
   background-size: cover; }
 
 .prog-header-item {
@@ -154,7 +154,6 @@ body {
 #prog-connect {
   padding-top: 35vh;
   background-color: var(--progblack);
-  background: url(https://s3.amazonaws.com/courtney.valhallacode.org/images/programmer/background.png);
   background-size: cover; }
 #prog-connect h1 {
   color: var(--progwhite);}
